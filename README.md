@@ -1,35 +1,39 @@
-# Diabetes Risk Prediction
+Diabetes Risk & Actuarial Modeling
+Predictive Health Risk Assessment using Ensemble Learning
 
-This project models the probability of diabetes diagnosis using historical health data.
-The goal is to apply statistical learning methods to predict individual risk while
-emphasizing model interpretability, evaluation, and uncertainty.
+🩺 Project Context
+This project develops a robust statistical framework to estimate the probability of diabetes diagnosis within a clinical population. Beyond simple classification, this work focuses on risk stratification—quantifying individual health risks to support actuarial modeling in health insurance pricing and population health management.
 
-## Overview
-The analysis focuses on building classification models to estimate diabetes risk based
-on demographic and clinical features. Data preprocessing, feature selection, and model
-evaluation are central components of the workflow.
+🛠️ Technical Stack
+Language: Python
 
-## Methods
-- Data cleaning and preprocessing
-- Feature engineering and variable selection
-- Probabilistic classification models
-- Model evaluation using multiple performance metrics
+Data Manipulation: pandas, NumPy
 
-## Evaluation
-Models were assessed using:
-- ROC-AUC
-- Confusion matrix
-- Calibration analysis
+Modeling & Evaluation: scikit-learn, XGBoost, CatBoost
 
-These metrics were used to evaluate both predictive accuracy and reliability of risk
-estimates.
+🔬 Methodology & Workflow
+The analysis follows a rigorous actuarial workflow to ensure both predictive power and model transparency:
 
-## Tools
-- Python
-- pandas
-- scikit-learn
+Clinical Feature Engineering: Derived metabolic health markers including AIP (Atherogenic Index of Plasma), lipid ratios, and blood pressure intensity to capture non-linear health signals.
 
-## Relevance
-This project demonstrates applied risk modeling, classification under uncertainty, and
-model evaluation—skills directly relevant to actuarial work in health, insurance pricing,
-and predictive risk assessment.
+Ensemble Architecture: Implemented a Stacked Generalization model using Gradient Boosting machines (XGBoost, CatBoost, HistGBM) to minimize variance and handle high-cardinality demographic features.
+
+Advanced Encoding: Utilized Ordinal and Frequency encoding for demographic variables to maintain feature integrity while optimizing for tree-based splits.
+
+📊 Model Evaluation & Credibility
+To meet industry standards for risk assessment, models were evaluated on three dimensions:
+
+Discriminative Ability (ROC-AUC): Measuring the model's capacity to correctly rank high-risk individuals.
+
+Segmentation Accuracy: Utilization of Confusion Matrices to understand Type I and Type II error costs—critical for determining the financial impact of false negatives in health screenings.
+
+Reliability (Calibration Analysis): Ensuring that predicted probabilities correspond to observed frequencies, a requirement for actuarial credibility and insurance premium loading.
+
+🎯 Actuarial Relevance
+This repository demonstrates technical proficiency in skills directly applicable to insurance and healthcare analytics:
+
+Applied Risk Modeling: Transforming raw clinical data into actionable risk scores.
+
+Classification under Uncertainty: Balancing predictive precision with the inherent noise of real-world health data.
+
+Predictive Assessment: Building models designed for integration into broader financial and health underwriting systems.
